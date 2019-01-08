@@ -1,0 +1,39 @@
+_____________________________________________________
+|Trabalho da Disciplina de Redes Neurais Artificiais |
+|Docente: Thomas Walter Rauber			     |
+|Discente: Ícaro Henrique Honorato		     |
+|____________________________________________________|
+
+							  [Breve Descrição dos Scripts]
+[Versão Pyhton utilizada: 3.6]
+__________________________________________________________________________________________________________________________________________________
+1 - dadosSOM.py:
+	 - Informações de ajuste da rede:
+		- Quantidade de neurônios : 7 x 7
+		- Quantidade de épocas: 200
+	- Tamanho da entrada:
+		- Número de características do simulador de processos(2)
+		- Identificação das características : 49 e 26
+__________________________________________________________________________________________________________________________________________________
+2 - normalizacao.py:
+	- Antes do treinamento da rede, os dados são normalizados para reduzir a discrepância na magnitude dos vetores de entrada.
+	- A metodologia de normalização utilizada pode ser encontrada no seguinte artigo:
+
+Natita, W & Wiboonsak, W & Dusadee, S. (2016). Appropriate Learning Rate and Neighborhood Function of Self-organizing Map (SOM) for Specific Humidity Pattern Classification over Southern Thailand. International Journal of Modeling and Optimization. 6. 61-65. 10.7763/IJMO.2016.V6.504.
+
+Resumidamente consiste em, dado um vetor coluna X, obter Xmáx ( valor máximo de X ) e Xmín ( valor mínimo de X ) e, para cada elemento x de X, normalizá-lo conforme segue:
+
+			x = (x - Xmín)/(Xmáx - Xmín)
+__________________________________________________________________________________________________________________________________________________
+
+3 - SOM_imagem.py:
+	- A função SOM plota uma imagem estática:
+		- Dos dados utlizados no treinamento;
+		- Dos neurônios da rede e seus respectivos pesos com sua vizinhança;
+__________________________________________________________________________________________________________________________________________________
+
+4 - Tennessee_Eastman_SOM.py:
+	 - Neste script são realizadas três principais tarefas:
+		 - Leitura do arquivo de características e tratamento dos dados para treinamento da rede;
+		 - Criação da rede com a função algorithms.SOFM com a definição dos parâmetros;
+		 - Exibição gráfica do treinamento da rede durante o número de épocas determinado.
